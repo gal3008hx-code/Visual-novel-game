@@ -10,7 +10,7 @@ void SetDependences(canvas* c, AssetManager* am) {
     SetAssetManager(am);
 }
 
-canvas* InitializeEngine(AssetManager AM) {
+canvas* InitializeEngine(AssetManager* AM) {
     SDL_Window* window = SDL_CreateWindow("GAME", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 512, 384, 0);
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
     if (!window) {

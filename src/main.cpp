@@ -6,7 +6,7 @@
 
 
 canvas* MC = nullptr;
-AssetManager AM;
+AssetManager* AM;
 
 int main() {
 
