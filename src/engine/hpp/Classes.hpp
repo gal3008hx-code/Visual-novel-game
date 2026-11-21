@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
-#include <cstring>
+#include <string>
 
 class sprite {
     public:

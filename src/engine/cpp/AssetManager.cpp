@@ -3,6 +3,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include "../hpp/Classes.hpp"
+#include <iostream>
 
 canvas* MainCanvas = nullptr;
 
@@ -18,8 +19,10 @@ void AssetManager::DrawTexture(SDL_Texture* texture, int16_t px, int16_t py) {
 
 void AssetManager::PlaySound(const char* path) {
     // Implementación para reproducir un sonido
+    std::cout << "Reproduciendo sonido desde: " << path << std::endl;
 }
 
 void AssetManager::PlayMusic(const char* path) {
     // Implementación para reproducir música
+    std::cout << "Reproduciendo música desde: " << path << std::endl;
 }
