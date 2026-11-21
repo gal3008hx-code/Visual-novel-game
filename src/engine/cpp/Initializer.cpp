@@ -10,23 +10,21 @@ void SetDependences(canvas* c, AssetManager* am) {
     SetAssetManager(am);
 }
 
-bool InitializeEngine() {
+canvas* InitializeEngine(AssetManager* AM) {
     SDL_Window* window = SDL_CreateWindow("GAME", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 512, 384, 0);
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
     if (!window) {
         std::cerr << SDL_GetError() << '\n';
-        return false;
+        return nullptr;
     }
     if (!renderer) {
         std::cerr << SDL_GetError() << '\n';
         SDL_DestroyWindow(window);
-        return false;
+        return nullptr;
     }
 
     canvas* mainCanvas = new canvas{window, renderer};
-    AssetManager* assetManager = new AssetManager();
+    SetDependences(mainCanvas, AM);
 
-    SetDependences(mainCanvas, assetManager);
-
-    return true;
+    return mainCanvas;
 }
