@@ -25,7 +25,7 @@ class canvas {
 
 class AssetManager {
     public:
-        void DrawTexture(const char* path, int16_t px, int16_t py);
+        void DrawTexture(SDL_Texture* texture, int16_t px, int16_t py);
         void PlaySound(const char* path);
         void PlayMusic(const char* path);
 };
