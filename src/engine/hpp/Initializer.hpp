@@ -3,4 +3,4 @@
 #include "Classes.hpp"
 
 void SetDependences(canvas* canvas, AssetManager* assetManager);
-canvas* InitializeEngine();
+canvas* InitializeEngine(AssetManager* assetManager);
