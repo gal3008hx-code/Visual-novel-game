@@ -17,7 +17,7 @@ class canvas {
         SDL_Window* CANVAS_WINDOW;
         SDL_Renderer* CANVAS_RENDERER;
 
-        sprite ITEMS[4];
+        sprite ITEMS[4] = {};
 
         void Draw();
         void RemoveSprite(uint16_t index);

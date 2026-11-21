@@ -5,16 +5,16 @@
 #include <SDL2/SDL_image.h>
 #include <cstring>
 
-AssetManager* AM = nullptr;
+AssetManager* ASSETMANAGER = nullptr;
 
 void SetAssetManager(AssetManager* assetManager) {
-    AM = assetManager;
+    ASSETMANAGER = assetManager;
 }
 
 void canvas::Draw() {
     SDL_RenderClear(CANVAS_RENDERER);
     for (const sprite& item : ITEMS) {
-        AM->DrawTexture(item.Texture, item.px, item.py);
+        ASSETMANAGER->DrawTexture(item.Texture, item.px, item.py);
     }
     SDL_RenderPresent(CANVAS_RENDERER);
 }
