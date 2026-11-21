@@ -3,12 +3,15 @@
 #include <cstdint>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#include <cstring>
 
 class sprite {
     public:
+        bool Occupied = false;
+
         int16_t px = 0;
         int16_t py = 0;
-
+        std::string path = "";
         SDL_Texture* Texture = nullptr;
 };
 
@@ -17,10 +20,11 @@ class canvas {
         SDL_Window* CANVAS_WINDOW;
         SDL_Renderer* CANVAS_RENDERER;
 
-        sprite ITEMS[4] = {};
+        sprite ITEMS[5] = {};
 
+        void AddSprite(const sprite* item, uint8_t index); 
         void Draw();
-        void RemoveSprite(uint16_t index);
+        void SetScene(const sprite* item[5]);
 };
 
 class AssetManager {
