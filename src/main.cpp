@@ -10,7 +10,7 @@ AssetManager* AM;
 
 //Función de depuración para ir probando cosas aleatorias, cambia constantemente, no tiene un propósito específico
 void DebugFunction() {
-    MC->AddSprite(new sprite{true, 0, 0, "../assets/Debug/DebugBackground.png", nullptr}, 0);
+    MC->AddSprite(new sprite{true, 0, 0, "assets/Debug/DebugBackground.png", nullptr}, 0);
 }
 
 int main() {
